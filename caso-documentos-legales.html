@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgnisBrain · Documentos legales colaborativos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #f5f7fa;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header con volver */
+        .header-bar {
+            background: #1a1a2e;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-link:hover {
+            color: #e65c00;
+        }
+
+        .logo-small {
+            font-weight: 700;
+            color: white;
+        }
+
+        /* Hero */
+        .hero-case {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 48px 0 64px;
+            text-align: center;
+        }
+
+        .hero-case h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .hero-case .tag {
+            display: inline-block;
+            background: rgba(255,140,66,0.2);
+            color: #ff8c42;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .urgency-badge {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-left: 12px;
+            vertical-align: middle;
+        }
+
+        /* Secciones */
+        .section {
+            padding: 48px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: #1a1a2e;
+            border-left: 4px solid #e65c00;
+            padding-left: 20px;
+        }
+
+        .section h3 {
+            font-size: 1.3rem;
+            margin: 24px 0 16px;
+            color: #1a1a2e;
+        }
+
+        /* Tarjetas de solución */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 32px 0;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .solution-card.ai {
+            border-top: 5px solid #10b981;
+        }
+
+        .solution-card.no-ai {
+            border-top: 5px solid #3b82f6;
+        }
+
+        .solution-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .solution-card h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .solution-card .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .badge.ai {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge.no-ai {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .step-list {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .step-list li {
+            margin-bottom: 12px;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 16px;
+            border-radius: 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #e65c00 0%, #ff8c42 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 16px;
+            transition: transform 0.2s;
+        }
+
+        .btn-link:hover {
+            transform: scale(1.02);
+        }
+
+        .footer-note {
+            background: #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 768px) {
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-case h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+        <div class="container">
+            <span class="logo-small">IgnisBrain</span>
+            <a href="index.html" class="back-link">← Volver a ZeroBrain</a>
+        </div>
+    </div>
+
+    <div class="hero-case">
+        <div class="container">
+            <span class="tag">Caso práctico · Documentos colaborativos</span>
+            <h1>Documentos legales <span class="urgency-badge">URGENTE</span><br>y documentos constituyentes</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 20px auto 0;">Cómo un equipo de 4 personas puede ponerse de acuerdo, revisar y firmar documentos críticos sin caer en el caos de versiones por email o WhatsApp.</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- El problema real -->
+        <section class="section">
+            <h2>📋 El problema que tenemos ahora</h2>
+            <div class="highlight-box">
+                <p style="font-weight: 600; margin-bottom: 12px;">Situación actual:</p>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Documento A (urgente):</strong> Texto legal que debe ser revisado y firmado por todos en <strong>menos de 48 horas</strong>. Cualquier retraso tiene consecuencias.</li>
+                    <li><strong>Documento B (importante):</strong> Documento constituyente que define las bases del grupo. No es urgente en días, pero es crítico para la organización futura.</li>
+                    <li><strong>El problema común a ambos:</strong> Cada persona tiene sus cambios en su versión local. Los comentarios llegan por WhatsApp, emails, o llamadas. Nadie tiene la "versión definitiva" clara. Se pierden sugerencias. Alguien dice "yo ya lo corregí" y otro dice "esa no es la última versión".</li>
+                </ul>
+            </div>
+            <p><strong>El chiste que hiciste (y que es verdad):</strong> "Esto también lo resuelve IgnisBrain". Y no fue un chiste. Es exactamente el caso de uso para el que fue diseñado.</p>
+        </section>
+
+        <!-- Dos enfoques -->
+        <section class="section">
+            <h2>⚡ Dos enfoques posibles</h2>
+            <p>Dependiendo de la urgencia y los recursos del equipo, IgnisBrain ofrece dos caminos. Ambos comparten la misma base: <strong>un único archivo de consenso</strong> como fuente de verdad.</p>
+            
+            <div class="solutions-grid">
+                <!-- Enfoque con IA (rápido, para lo urgente) -->
+                <div class="solution-card ai">
+                    <div class="solution-icon">🤖⚡</div>
+                    <span class="badge ai">Con IA · Para lo URGENTE</span>
+                    <h3>48 horas · Firmas inmediatas</h3>
+                    <p>Ideal para el documento legal urgente. Usamos IA para acelerar la consolidación de cambios y generar el documento final.</p>
+                    
+                    <p><strong>Flujo de trabajo:</strong></p>
+                    <ol class="step-list">
+                        <li><strong>1. Subir la versión base</strong> → Alguien sube el borrador inicial a <code>public/borradores/documento_legal_v0.md</code>.</li>
+                        <li><strong>2. Cada uno comenta en actas</strong> → En lugar de emails, cada persona crea un archivo en <code>public/actas/</code> con sus correcciones y observaciones.</li>
+                        <li><strong>3. Asistente Ignis (IA) consolida</strong> → Se le pide: "Ignis, lee el borrador y las 4 actas de comentarios. Genera una versión consolidada con las sugerencias que coinciden y marca las contradicciones."</li>
+                        <li><strong>4. Resolución rápida de contradicciones</strong> → Solo las discrepancias reales se discuten (en lugar de las 50 correcciones menores).</li>
+                        <li><strong>5. Generación del documento final</strong> → El script <code>md2html.py</code> o <code>md2pdf.py</code> genera el documento listo para firmar.</li>
+                    </ol>
+                    
+                    <div class="code-block">
+                        # Ejemplo de prompt para Ignis
+                        "Ignis, tengo el documento base en public/borradores/contrato_v0.md 
+                        y cuatro actas en public/actas/ con comentarios de Juan, Ana, Luis y yo.
+                        Genera un documento consolidado. Cuando encuentres una contradicción 
+                        (ej: Juan dice 'plazo 15 días' y Ana dice 'plazo 30 días'), 
+                        marcala con [CONTRADICCIÓN] y dime quiénes discrepan."
+                    </div>
+                    
+                    <p><strong>Tiempo estimado:</strong> 2-4 horas de trabajo efectivo + 24h para firmas.</p>
+                </div>
+
+                <!-- Enfoque sin IA (metódico, para lo importante) -->
+                <div class="solution-card no-ai">
+                    <div class="solution-icon">📝🐢</div>
+                    <span class="badge no-ai">Sin IA · Para lo IMPORTANTE</span>
+                    <h3>Documento constituyente · Con calma</h3>
+                    <p>Para el documento que define las bases del grupo. No es urgente, pero debe ser reflexivo y consensuado. Sin prisas, sin IA.</p>
+                    
+                    <p><strong>Flujo de trabajo:</strong></p>
+                    <ol class="step-list">
+                        <li><strong>1. Versión base</strong> → Borrador en <code>public/borradores/constituyente_v0.md</code>.</li>
+                        <li><strong>2. Revisión asíncrona</strong> → Cada uno crea un acta con sus propuestas. <strong>No se edita el borrador directamente</strong> (evita conflictos de Git).</li>
+                        <li><strong>3. Consolidación manual</strong> → Una persona (o rotativa) integra las propuestas en una nueva versión (<code>v1</code>, <code>v2</code>...).</li>
+                        <li><strong>4. Ronda de validación</strong> → Se sube la versión consolidada y se abre un período de "objeción" (ej: 48h).</li>
+                        <li><strong>5. Acta de cierre</strong> → Una vez sin objeciones, se documenta en <code>public/actas/</code> que el documento constituyente queda aprobado.</li>
+                    </ol>
+                    
+                    <p><strong>Ventaja clave:</strong> Todo el historial de versiones y discusiones queda guardado en Git. Dentro de un año, si alguien pregunta "¿por qué se incluyó esta cláusula?", la respuesta está en un acta.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparativa rápida -->
+        <section class="section">
+            <h2>📊 Comparativa: Con IA vs. Sin IA</h2>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden;">
+                    <thead style="background: #1a1a2e; color: white;">
+                        <tr><th style="padding: 12px; text-align: left;">Aspecto</th><th style="padding: 12px; text-align: left;">Con IA (para lo urgente)</th><th style="padding: 12px; text-align: left;">Sin IA (para lo importante)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 12px;">Velocidad</td><td style="padding: 12px;">✅ Muy alta (horas)</td><td style="padding: 12px;">🟡 Media (días)</td></tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 12px;">Precisión</td><td style="padding: 12px;">🟡 Depende de la claridad de las actas</td><td style="padding: 12px;">✅ Alta (revisión humana)</td></tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 12px;">Requiere IA local/nube</td><td style="padding: 12px;">✅ Sí (Ollama, ChatGPT, etc.)</td><td style="padding: 12px;">❌ No</td></tr>
+                        <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 12px;">Curva de aprendizaje</td><td style="padding: 12px;">Media (saber dar prompts)</td><td style="padding: 12px;">Baja (solo editar archivos)</td></tr>
+                        <tr><td style="padding: 12px;">Auditable</td><td style="padding: 12px;">✅ Total (Git guarda actas y versiones)</td><td style="padding: 12px;">✅ Total</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- La solución técnica mínima (sin humo) -->
+        <section class="section">
+            <h2>🔧 La solución técnica (sin humo)</h2>
+            <p>Esto no requiere instalar nada complejo. Solo:</p>
+            <ul style="margin-left: 24px; margin-bottom: 24px;">
+                <li><strong>Git</strong> (lo usan los programadores, pero se aprende en 10 minutos)</li>
+                <li><strong>Una cuenta gratuita</strong> en GitHub o GitLab</li>
+                <li><strong>Opcional para IA:</strong> Ollama (local y gratis) o una API de ChatGPT</li>
+            </ul>
+            
+            <div class="code-block">
+                # Estructura mínima para este caso
+                Ignisbrain/
+                ├── public/
+                │   ├── borradores/
+                │   │   ├── documento_legal_v0.md
+                │   │   └── constituyente_v0.md
+                │   ├── actas/
+                │   │   ├── 2025-04-26_juan_comentarios_legal.md
+                │   │   ├── 2025-04-26_ana_comentarios_legal.md
+                │   │   └── ...
+                │   └── consenso/
+                │       ├── documento_legal_final.md
+                │       └── constituyente_final.md
+                └── herramientas/
+                    └── md2pdf.py  (opcional, para generar PDF firmable)
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>Lo más importante que este sistema resuelve:</strong></p>
+                <p>El problema no es técnico. Es <strong>humano</strong>: "¿cuál es la última versión?", "¿dónde estaba ese comentario?", "¿quién dijo qué?". IgnisBrain no es magia. Es <strong>un lugar único y ordenado</strong> para que el desacuerdo y el acuerdo convivan documentados. La IA solo acelera la consolidación. El valor real está en <strong>saber que todo lo que se dijo está en un archivo, no en una conversación perdida</strong>.</p>
+            </div>
+        </section>
+
+        <!-- Enlace para añadir a la página principal -->
+        <section class="section">
+            <h2>🔗 Para integrar en tu página principal</h2>
+            <div class="footer-note">
+                <p style="margin-bottom: 16px;">Si ya tienes desplegada la página de presentación de ZeroBrain (<code>index.html</code>), añade este enlace a la sección de casos de uso:</p>
+                <div class="code-block" style="background: #f1f5f9; color: #1a1a2e;">
+                    &lt;a href="caso-documentos-legales.html" style="display: inline-block; background: #e65c00; color: white; padding: 12px 24px; border-radius: 40px; text-decoration: none;"&gt;
+                        📄 Ver caso: Documentos legales colaborativos
+                    &lt;/a&gt;
+                </div>
+                <p style="margin-top: 16px;">O bien, añade esta línea en el <code>index.html</code> dentro de la sección de casos:</p>
+                <div class="code-block" style="background: #f1f5f9; color: #1a1a2e;">
+                    &lt;div class="card-caso"&gt;
+                        &lt;span class="caso-icon"&gt;⚖️&lt;/span&gt;
+                        &lt;h3&gt;Documentos legales colaborativos&lt;/h3&gt;
+                        &lt;p&gt;Cómo revisar y firmar documentos urgentes sin caos de versiones.&lt;/p&gt;
+                        &lt;a href="caso-documentos-legales.html"&gt;Ver solución →&lt;/a&gt;
+                    &lt;/div&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Cierre -->
+        <section class="section" style="text-align: center;">
+            <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 24px; padding: 48px 24px; color: white;">
+                <p style="font-size: 1.3rem; margin-bottom: 16px;">🎯 "El problema de ponerse de acuerdo no es técnico. Es humano."</p>
+                <p style="opacity: 0.9; margin-bottom: 24px;">IgnisBrain no elimina las discusiones. Las organiza para que se resuelvan en lugar de perderse.</p>
+                <a href="index.html" style="display: inline-block; background: white; color: #1a1a2e; padding: 12px 28px; border-radius: 40px; text-decoration: none; font-weight: 600;">← Volver a ZeroBrain</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
