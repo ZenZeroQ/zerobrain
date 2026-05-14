@@ -16,12 +16,9 @@
                 <a href="#principios">Principios</a>
                 <a href="#metodologia">Metodología</a>
                 <a href="#casos">Casos</a>
-                <a href="#ignisbrain">IgnisBrain</a>
-                <a href="caso-documentos-legales.html">Acuerdo de docuemntos</a>
             </div>
         </div>
     </nav>
-
     <header class="hero">
         <div class="container">
             <h1>ZeroBrain</h1>
@@ -29,7 +26,6 @@
             <p class="description">Simple, flexible, transparente. Los pilares para cualquier proyecto.</p>
         </div>
     </header>
-
     <main>
         <!-- Sección: Qué es ZeroBrain -->
         <section id="que-es" class="section">
@@ -83,7 +79,7 @@
                         <div class="paso-numero">1</div>
                         <div class="paso-contenido">
                             <h3>¿Cómo se comparte la información?</h3>
-                            <p>Define el flujo: ¿quién puede ver qué? ¿cómo se sincronizan los cambios? ¿qué información es pública y cuál privada? ZeroBrain propone una estructura mínima de carpetas (<code>public/</code> vs <code>private/</code>) y Git como herramienta de sincronización.</p>
+                            <p>Define el flujo: ¿quién puede ver qué? ¿cómo se sincronizan los cambios? ¿qué información es pública y cuál privada? ZeroBrain propone una estructura mínima de carpetas.</p>
                         </div>
                     </div>
                     <div class="paso">
@@ -103,7 +99,7 @@
                 </div>
 
                 <div class="highlight">
-                    <p><strong>El objetivo de ZeroBrain concluye con estas definiciones.</strong> Desde este punto en adelante, ZeroBrain ofrece la potencialidad de abordar cualquier desafío usando su metodología, pero la implementación dependerá de aspectos más específicos. Por ello, la continuación es <strong>IgnisBrain</strong>.</p>
+                    <p><strong>El objetivo de ZeroBrain concluye con estas definiciones.</strong> Desde este punto en adelante, ZeroBrain ofrece la potencialidad de abordar cualquier desafío usando su metodología, pero la implementación dependerá de aspectos más específicos. 
                 </div>
             </div>
         </section>
@@ -112,14 +108,14 @@
         <section id="casos" class="section bg-light">
             <div class="container">
                 <h2>Casos de uso</h2>
-                <p class="section-subtitle">ZeroBrain como metodología puede aplicarse a múltiples contextos. Estos son tres casos desarrollados por IgnisGroup:</p>
+                <p class="section-subtitle">ZeroBrain como metodología puede aplicarse a múltiples contextos.</p>
                 
                 <div class="grid-casos">
                     <div class="card-caso">
                         <span class="caso-icon">📄</span>
                         <h3>Revisión y aprobación simple de documentos</h3>
                         <p><strong>El problema:</strong> En grupos de trabajo, coordinar la revisión de un documento suele implicar cadenas de emails, versiones contradictorias y pérdida de información. Alguien dice "yo ya lo mandé" y otro dice "yo no lo recibí".</p>
-                        <p><strong>La solución con ZeroBrain:</strong> Se define una carpeta <code>public/borradores/</code> donde cada uno aporta. Las discusiones van en <code>public/actas/</code>. El consenso final se vierte en <code>public/consenso.md</code>. Un script genera automáticamente un HTML o PDF con el documento final. Todo queda registrado, versionado y auditable.</p>
+                        <p><strong>La solución con ZeroBrain:</strong> Se define una carpeta  donde cada uno aporta. El consenso final se vierte en una carpeta. Un script genera automáticamente un HTML o PDF con el documento final. Todo queda registrado, versionado y auditable.</p>
                         <p><strong>Resultado:</strong> Fin del caos de versiones. Un solo lugar para todo. Historial completo de decisiones. Y si alguien pregunta "¿por qué cambió esta frase?", la respuesta está en un acta, no en la memoria.</p>
                     </div>
                     
@@ -127,7 +123,7 @@
                         <span class="caso-icon">💰</span>
                         <h3>Revisión simple de finanzas grupales</h3>
                         <p><strong>El problema:</strong> Gastos compartidos entre 3, 5 o 10 personas. Uno paga, otro debe, otro no está de acuerdo con cómo se gastó. Las cuentas se llevan en un Excel que alguien actualiza cuando puede. Las discusiones son por WhatsApp y se pierden.</p>
-                        <p><strong>La solución con ZeroBrain:</strong> Los números reales se registran en CSV dentro de <code>public/finanzas/</code>. Las reglas (ej: "todo gasto >50€ requiere aprobación") se documentan en <code>public/consenso.md</code>. Las discusiones sobre si un gasto fue adecuado se registran en actas. Un script genera un dashboard HTML con gráficos y alertas si alguna regla se incumple. Todo es transparente: cualquiera puede ver los números, las reglas y las decisiones.</p>
+                        <p><strong>La solución con ZeroBrain:</strong> Los números reales se registran en CSV dentro de  una carpeta. Las reglas (ej: "todo gasto >50€ requiere aprobación") se documentan. Las discusiones sobre si un gasto fue adecuado se registran en actas. Un script genera un dashboard HTML con gráficos y alertas si alguna regla se incumple. Todo es transparente: cualquiera puede ver los números, las reglas y las decisiones.</p>
                         <p><strong>Resultado:</strong> Fin de las discusiones por mensajes perdidos. Transparencia radical. Y si alguien pregunta "¿por qué pagamos esto?", la respuesta está en un acta, no en una conversación borrada.</p>
                     </div>
                     
@@ -135,58 +131,26 @@
                         <span class="caso-icon">📋</span>
                         <h3>Revisión simple de proyectos grupales</h3>
                         <p><strong>El problema:</strong> Un equipo de 4-6 personas trabajando en un proyecto. Las tareas se asignan verbalmente. El estado de avance se pregunta en reuniones. Alguien no entregó a tiempo, nadie sabe por qué. Las decisiones importantes se olvidan a la semana.</p>
-                        <p><strong>La solución con ZeroBrain:</strong> El proyecto tiene una carpeta <code>public/actas/</code> donde se documentan las reuniones. Las decisiones se vuelcan en <code>public/consenso.md</code>. El resultado esperado (un informe, una web, un prototipo) se publica automáticamente desde el consenso. El asistente Ignis puede responder: "¿qué se decidió sobre la interfaz de usuario?" o "¿cuál es el plazo acordado para la fase 2?".</p>
+                        <p><strong>La solución con ZeroBrain:</strong> El proyecto tiene una carpeta donde se documentan las reuniones. Las decisiones se vuelcan en un archivo. El resultado esperado (un informe, una web, un prototipo) se publica automáticamente desde el consenso. El asistente virtual puede responder: "¿qué se decidió sobre la interfaz de usuario?" o "¿cuál es el plazo acordado para la fase 2?".</p>
                         <p><strong>Resultado:</strong> Nunca más "no me acordaba de eso". El proyecto tiene memoria. Las decisiones están escritas. Los plazos están documentados. Y si alguien dice "yo no me comprometí a eso", se lee el acta correspondiente.</p>
-                    </div>
-                    <div class="card-caso">
-                        <span class="caso-icon">⚖️</span>
-                        <h3>Acuerdo de Documentos legales colaborativos</h3>
-                        <p>Revisión y firma de documentos urgentes (48h) y documentos constituyentes. Dos enfoques: con IA para acelerar, sin IA para máxima transparencia.</p>
-                        <a href="caso-documentos-legales.html" style="color: #e65c00; text-decoration: none; font-weight: 500;">Ver solución detallada →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección: IgnisBrain -->
-        <section id="ignisbrain" class="section">
-            <div class="container">
-                <h2>IgnisBrain</h2>
-                <div class="highlight-ignis">
-                    <p><strong>¿Qué es IgnisBrain?</strong> Es una solución propuesta por IgnisGroup basada en la metodología ZeroBrain. Su objetivo es implementar los principios de ZeroBrain en casos concretos, ofreciendo herramientas y scripts que automatizan el flujo de trabajo.</p>
-                </div>
-                
-                <div class="grid-ignis">
-                    <div class="ignis-item">
-                        <h3>🔧 Para documentos</h3>
-                        <p>Scripts que convierten <code>consenso.md</code> en HTML, PDF o cualquier formato. Publicación automática en GitHub Pages.</p>
-                    </div>
-                    <div class="ignis-item">
-                        <h3>💰 Para finanzas</h3>
-                        <p>Generador de dashboards financieros a partir de CSV + reglas en markdown. Alertas de desviaciones. Asistente IA para consultas.</p>
-                    </div>
-                    <div class="ignis-item">
-                        <h3>📊 Para proyectos</h3>
-                        <p>Sistema de actas + tareas + hitos. Seguimiento de decisiones. Integración con asistentes virtuales para responder preguntas sobre el proyecto.</p>
-                    </div>
-                    <div class="ignis-item">
-                        <h3>🤖 Asistente Ignis</h3>
-                        <p>IA local (RAG) que lee tus documentos y responde preguntas basadas en el contenido real. Sin enviar datos a la nube. Configurable para modo grupo o individual.</p>
-                    </div>
-                </div>
-                
-                <div class="callout">
-                    <p><strong>La continuación es IgnisBrain.</strong> ZeroBrain define el <em>qué</em> y el <em>por qué</em>. IgnisBrain construye el <em>cómo</em> para casos concretos. Si buscas empezar hoy mismo con una estructura organizada, empieza por ZeroBrain. Si quieres herramientas listas para usar, explora IgnisBrain.</p>
-                </div>
-            </div>
-        </section>
+ 
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>ZeroBrain · Metodología abierta · IgnisGroup</p>
+            <p>ZeroBrain · Metodología abierta</p>
             <p class="small">Los pilares del conocimiento y desarrollo</p>
         </div>
+        <div class="container">
+ <p>&copy; 2026 ZeroBrain. Todos los derechos reservados.</p>
+    <p>Contacto: <a href="mailto:zn.unitas@gmail.com">zn.unitas@gmail.com</a></p>        </div>
+
+
     </footer>
 </body>
 </html>
